@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: futura;
+    display:flex;/* технология для создания сложных гибких макетов за счёт правильного размещения элементов на странице.*/
+    flex-direction:column;/*направление оси*//*это все надо чтобы текст стоял ровно*/
+    background-image: linear-gradient(135deg,#767676,#000000,#000000,#484848,#1b1828,#16151a,#000000,#a4a4a4);
+    background-size: 250%;
+    animation:gradient 8s ease-in-out infinite;
+}
+
+.header {
+    width:100%;
+    height:10vw;
+    color:white;
+    font-family: "Italianno", cursive;
+}
+
+.header:hover{
+    background:whitesmoke;
+    transition:all .9s ease;
+    color:black;
+}
+
+.header h1{
+    z-index:1;
+    position:absolute;
+    font-size: 9vw;/* размер шрифта */
+    line-height:13vw;/* расположение текста */
+    left:0;
+    background:linear-gradient(135deg,#ff00d2,#fed90f,#00a2ff,#09f1b8,#ff00d2,#fed90f,#00a2ff,#09f1b8);/* градиент */
+    background-size:500%;
+    -webkit-background-clip:text;/* градиент к тексту */
+    -webkit-text-fill-color:transparent;
+    animation:gradient 8s ease-in-out infinite; /* анимация далее подключим код через @keyframes */
+}
+
+.header h{
+    position:absolute;
+    right: 19vw;
+    top:3vw;
+    font-size:8vw;
+    text-shadow: 1vw 1vw 1vw black;
+}
+
+
+/* анимация для кнопки */
+.animated{
+    animation: scaleButton;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scaleButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.slider {
+    overflow:scroll;
+}
+
+.slides {
+    width:400%;/*сколько фото столько сотен и процентов*/
+    height:100%;
+    display:flex;
+}
+
+.slide { /* один длинный фон в котором мы отображаем только в нужном месте картинку */
+    width:100%;
+}
+
+.slide img { /* размер изибражения */
+    width: 100%;
+    height: 100%;
+}
+
+
+.lan, h1{
+    text-align: center;
+    color:whitesmoke;
+    font-size:4vw;
+    animation:shadow 8s ease-in-out infinite;
+    margin: 3vw;
+}
+
+
+
+
+
+
+
+
+@keyframes gradient{/* код функция к анимации */
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shadow{/* код функция к анимации */
+    0%{
+        text-shadow: -10vw 1vw 3vw white;
+    }
+    50%{
+        text-shadow: 1vw 5vw 3vw white;
+    }
+    100%{
+        text-shadow: -10vw 1vw 3vw white;
+    }
+}
+
+@keyframes animatetop{
+    from{
+        top:-30vw;
+        pacity:0;
+    }
+    to {
+        top: 0;
+        pacity:1;
+    }
+}

@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url(products_back.jpg);
+  background-size: cover;
+  background-position: 50%;
+}
+
+.gallery {/*позицыя и в виде сетки адаптивной и легко растягиваться в зависимости от ширины экрана или размеров изображений*/
+  display: grid;/*внутри контейнера в виде сетки.*/
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));колонки будут автоматически подстраиваться под ширину контейнера. */
+  grid-gap: 2vw; /* промежуток между элементами в сетке. */
+  padding: 5vw;
+}
+
+.gallery-item {/*тени радиус*/
+  display: flex;
+  position: relative;
+  overflow: scroll;
+  border-radius: 3vw;
+  box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.36);
+}
+
+.gallery-item img {
+  object-fit: cover;	
+  width: auto;
+  height: 65vw;
+  transition: transform 0.3s ease;
+}
