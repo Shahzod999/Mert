@@ -1,64 +1,61 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
-    <link rel="stylesheet" href="static/css/about.css">
-    <link rel="stylesheet" href="static/css/button.css">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
 </head>
 <body>
 
-    <div class="upward" onclick="scrollTopTop()"></div>
+<div class="upward" onclick="scrollTopTop()"></div>
 
-    <button id="button">
-        <img src="static/img/flag.png" alt="Mert">
-    </button>
+<button id="button">
+    <img src="{% static 'img/flag.png' %}" alt="Mert">
+</button>
 
-    <div id="popup">
-        <div id="popup-content">
-            <div id="menu" class="product">
-                <a class="block" href="/about" data-translate-key="about">About us</a>
-                <a class="block" href="/products" data-translate-key="products">Products</a>
-                <a class="block" href="/" data-translate-key="main">Main</a>
-            </div>
+<div id="popup">
+    <div id="popup-content">
+        <div id="menu" class="product">
+            <a class="block" href="/about" data-translate-key="about">About us</a>
+            <a class="block" href="/products" data-translate-key="products">Products</a>
+            <a class="block" href="/" data-translate-key="main">Main</a>
         </div>
     </div>
+</div>
 
-    <div class="slider">
-        <div class="slides">
-            <img src="static/img/about_main.jpg">
-            <img src="static/img/about_main2.jpg">
-            <img src="static/img/about_main3.jpg">
-        </div>
+<div class="slider">
+    <div class="slides">
+        <img src="{% static 'img/about_main.jpg' %}">
+        <img src="{% static 'img/about_main2.jpg' %}">
+        <img src="{% static 'img/about_main3.jpg' %}">
     </div>
+</div>
 
-    
-    <div class="title">
-        <h1 style="margin-bottom: 5vw;" >Mert Unal</h1>
+<div class="title">
+    <h1 style="margin-bottom: 5vw;">Mert Unal</h1>
+    <p class="lan" data-translate-key="location">
+        Our central and main store has been open for 20 years and located inside the Ali pasa mosque
+    </p>
+</div>
 
-        <p class="lan" data-translate-key="location">
-            Our central and main store has been open for 20 years and located inside the Ali pasa mosque
-        </p>
+<div id="footer">
+    <div id="map">
+        <iframe alt="LOCATION" src="https://www.google.com/maps/embed?pb=!4v1690027607126!6m8!1m7!1s9DWhaa8URmhxL7AKWR9c4Q!2m2!1d41.00880133735945!2d28.96816717939223!3f11.489059729962548!4f2.655691714289091!5f0.4000000000000002" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+</div>
 
-    <div id="footer">
-        <div id="map">
-            <iframe alt="LOCATION" src="https://www.google.com/maps/embed?pb=!4v1690027607126!6m8!1m7!1s9DWhaa8URmhxL7AKWR9c4Q!2m2!1d41.00880133735945!2d28.96816717939223!3f11.489059729962548!4f2.655691714289091!5f0.4000000000000002" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
+<nav class="footer">
+    <ul class="list">
+        <li class="lang"><button class="translate" id="usa"> <img src="{% static 'img/usa.png' %}" alt="usa"> </button></li>
+        <li class="lang"><button class="translate" id="ukr"> <img src="{% static 'img/ukr.png' %}" alt="ukr"> </button></li>
+        <li class="lang"><button class="translate" id="tr"> <img src="{% static 'img/tr.png' %}" alt="tr"> </button></li>
+        <li class="lang"><button class="translate" id="arab"> <img src="{% static 'img/arab.png' %}" alt="arab"> </button></li>
+    </ul>
+</nav>
 
-    <nav class="footer">
-        <ul class="list">
-            <li class="lang"><button class="translate" id="usa"> <img src="static/img/usa.png" alt="usa"> </button></li>
-            <li class="lang"><button class="translate" id="ukr"> <img src="static/img/ukr.png" alt="ukr"> </button></li>
-            <li class="lang"><button class="translate" id="tr"> <img src="static/img/tr.png" alt="tr"> </button></li>
-            <li class="lang"><button class="translate" id="arab"> <img src="static/img/arab.png" alt="arab"> </button></li>
-        </ul>
-    </nav>
-
-    <script src="static/js/script.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
