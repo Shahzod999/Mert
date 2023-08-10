@@ -1,20 +1,25 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/button.css' %}">
 </head>
 <body>
 
-<div class="upward" onclick="scrollTopTop()"></div>
-
-<button id="button">
+<button id="button" class="animated">
     <img src="{% static 'img/flag.png' %}" alt="Mert">
 </button>
+
+<div class="header">
+    <h1>Mert official</h1>
+    <h>Istanbul</h>
+</div>
 
 <div id="popup">
     <div id="popup-content">
@@ -28,22 +33,28 @@
 
 <div class="slider">
     <div class="slides">
-        <img src="{% static 'img/about_main.jpg' %}">
-        <img src="{% static 'img/about_main2.jpg' %}">
-        <img src="{% static 'img/about_main3.jpg' %}">
+        <div class="slide"><img src="{% static 'img/img1.jpg' %}" alt="Image 1"></div>
+        <div class="slide"><img src="{% static 'img/img2.jpg' %}" alt="Image 2"></div>
+        <div class="slide"><img src="{% static 'img/img3.jpg' %}" alt="Image 3"></div>
+        <div class="slide"><img src="{% static 'img/img4.jpg' %}" alt="Image 4"></div>
     </div>
 </div>
 
-<div class="title">
-    <h1 style="margin-bottom: 5vw;">Mert Unal</h1>
-    <p class="lan" data-translate-key="location">
-        Our central and main store has been open for 20 years and located inside the Ali pasa mosque
-    </p>
+<div>
+    <h1>Mert Unal</h1>
+    <p class="lan" data-translate-key="owner">
+        Is the owner of a network of branded stores <br>
+        And the production of branded products of Turkish quality. <br>
+
+        Throughout Istanbul, in the places of Taksim, Besiktas, Uskudar, Kadikoy, Beylarbey, Bakirkoy, Esenyurt, there are 12 branded stores owned by Mert Unal. <br>
+        The most central and discount store is located in the heart of Istanbul at the <br>Grand Bazaar.</p>
 </div>
 
-<div id="footer">
-    <div id="map">
-        <iframe alt="LOCATION" src="https://www.google.com/maps/embed?pb=!4v1690027607126!6m8!1m7!1s9DWhaa8URmhxL7AKWR9c4Q!2m2!1d41.00880133735945!2d28.96816717939223!3f11.489059729962548!4f2.655691714289091!5f0.4000000000000002" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="{% static 'img/mert1.jpg' %}"></div>
+        <div class="slide"><img src="{% static 'img/mert2.jpg' %}"></div>
+        <div class="slide"><img src="{% static 'img/mert3.jpg' %}"></div>
     </div>
 </div>
 
@@ -59,3 +70,4 @@
 <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
+
