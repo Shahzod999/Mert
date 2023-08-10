@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
-from decouple import config
-
+from dotenv import load_dotenv #dotenv и вызовите функцию load_dotenv()  
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,11 +19,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+project_folder = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(project_folder, '.env'))
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+load_dotenv() #для загрузки переменных из файла .env.
+SECRET_KEY = os.getenv("SECRET_KEY") #Затем используйте функцию os.getenv() для доступа к этим переменным.
+DEBUG = os.getenv("DEBUG") == "True"
 
 ALLOWED_HOSTS = []
 
@@ -118,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = '/home/Shahzod999/Mert/market/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
