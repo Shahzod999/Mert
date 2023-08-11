@@ -9,7 +9,7 @@ load_dotenv(os.path.join(project_folder, '.env'))
 
 load_dotenv() #для загрузки переменных из файла .env.
 SECRET_KEY = os.getenv("SECRET_KEY") #Затем используйте функцию os.getenv() для доступа к этим переменным.
-DEBUG = os.getenv("DEBUG") == "True"
+DEBUG = True
 
 ALLOWED_HOSTS = []
 

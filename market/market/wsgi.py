@@ -15,7 +15,3 @@ application = get_wsgi_application()
 from dotenv import load_dotenv # load_dotenv для загрузки переменных окружения 
 project_folder = os.path.expanduser('/home/Shahzod999/Mert/market/market')  # adjust as appropriate
 load_dotenv(os.path.join(project_folder, '.env'))
-
-from dotenv import load_dotenv # load_dotenv для загрузки переменных окружения 
-project_folder = os.path.expanduser('/home/Shahzod999/Mert/market/market')  # adjust as appropriate
-load_dotenv(os.path.join(project_folder, '.env'))
